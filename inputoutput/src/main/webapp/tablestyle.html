@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>표 스타일</title>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');	
+		body {
+			 font-family: "Noto Sans KR", serif;
+ 			 font-optical-sizing: auto;
+  			 font-style: normal;
+  			 font-weight: 800;
+		}
+		table {
+			margin-bottom:50px;
+		}
+		.table1 {
+			border:1px solid black;
+			border-collapse:separate;
+			border-spacing:20px 10px;
+		}
+		.table2 {
+			border-collapse:separate;
+			border-spacing:20px 10px;
+		}
+		td {
+			border:1px dotted blue;
+			padding:10px;
+			text-align:center;
+		}
+		
+	</style>
+</head>
+<body>
+	<table class="table1">
+		<caption>프로 축구 경기 일정</caption>
+		<tr>
+			<td>울산</td>
+			<td>울산vs인천</td>
+		</tr>
+		<tr>
+			<td>부산</td>
+			<td>부산vs대전</td>
+		</tr>
+		<tr>
+			<td>서울</td>
+			<td>서울vs강원</td>
+		</tr>
+	</table>
+	
+	<table>
+		<caption>프로 축구 경기 일정</caption>
+		<tr>
+			<td>울산</td>
+			<td>부산</td>
+			<td>서울</td>
+		</tr>
+		<tr>
+			<td>울산vs인천</td>
+			<td>부산vs대전</td>
+			<td>서울vs강원</td>
+		</tr>
+	</table>
+</body>
+</html>
