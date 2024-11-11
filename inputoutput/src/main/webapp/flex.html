@@ -59,6 +59,33 @@
 		padding:20px;
 	}
 	
+	
+	#container4 {
+		width:600px;
+		height:300px;
+		margin:0 auto;
+		display:flex;		
+		border:2px solid black;
+	}
+	#container4 div {
+		width:200px;
+		border:1px solid black;
+		background:#ccc;
+	}
+	#container4 div h2 {
+		font-size:20px;
+		font-weight:bold;
+		padding:20px;
+	}
+	#box1 {
+		order:2;
+	}
+	#box2 {
+		order:3;
+	}
+	#box3 {
+		order:1;
+	}
 </style>
 </head>
 <body>
@@ -81,6 +108,13 @@
 	<div><h2>1</h2></div>
 	<div><h2>2</h2></div>
 	<div><h2>3</h2></div>
+	</div>
+	<br><br>
+	<h1>flex order 속성</h1>
+	<div id="container4">
+	<div id="box1"><h2>1</h2></div>
+	<div id="box2"><h2>2</h2></div>
+	<div id="box3"><h2>3</h2></div>
 	</div>
 </body>
 </html>
