@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>가위바위보 맞추기</title>
+<script>
+	document.write("<h1>컴퓨터 가위, 바위, 보</>","<br>");
+	var game=prompt("가위 바위 보중 선택하세요","가위");
+	var gameNum;
+	switch(game){
+	case "가위": gameNum=1;
+	break;
+	case "바위": gameNum=2;
+	break;
+	case "보": gameNum=3;
+	break;
+	default: alert("잘못 작성하셨습니다,");
+	location.reload();
+	}
+	document.write("플레이어는 "+game+"을 냈습니다","<br>");
+	var com = Math.ceil(Math.random()*3);
+	if(com==1){
+		com1="가위";
+		document.write("컴퓨터는 "+com1+"을 냈습니다","<br>");
+	} else if(com==2){
+		com2="바위";
+		document.write("컴퓨터는 "+com2+"을 냈습니다","<br>");
+	} else {
+		com3="보";
+		document.write("컴퓨터는 "+com3+"을 냈습니다","<br>");
+	}
+	
+	document.write("<img src=\"img/math_img"+com+".jpg\">");
+	if(gameNum == com) {		
+		document.write("비겼습니다");
+	} else if(gameNum==1) {
+		if(com==1){
+			document.write("비겼습니다");
+		} else if(com==2){
+			document.write("<img src=\"img/game2.png\">");
+			document.write("패배했습니다");
+		} else {
+			document.write("<img src=\"img/game1.jpg\">");
+			document.write("승리했습니다");
+		}		
+	} else if(gameNum==2){
+		if(com==2){
+			document.write("비겼습니다");
+		} else if(com==3){
+			document.write("<img src=\"img/game2.png\">");
+			document.write("패배했습니다");
+		} else {
+			document.write("<img src=\"img/game1.jpg\">");
+			document.write("승리했습니다");
+		}		
+	} else {
+		if(com==3){
+			document.write("비겼습니다");
+		} else if(com==1){
+			document.write("<img src=\"img/game2.png\">");
+			document.write("패배했습니다");
+		} else {
+			document.write("<img src=\"img/game1.jpg\">");
+			document.write("승리했습니다");
+		}
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
