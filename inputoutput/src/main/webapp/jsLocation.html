@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Bom Location Object</title>
+</head>
+<body>
+<h1>현재 창에 문서 불러오기</h1>
+<p>아래 버튼을 눌러 새로운 문서를 연 후에 브라우저의 뒤로가기 버튼을 눌러보세요!</p>
+
+
+
+<button onclick="openDocument()">새로운 문서 열기</button>
+<button onclick="openDocumentReplace()">이전문서 삭제후 새로운 문서 열기</button>
+<script>
+	document.write("현재 문서의 주소는"+location.href+"입니다.");
+	function openDocument() {
+		location.assign("fr/memberForm.jsp");
+	}
+	function openDocumentReplace() {
+		location.replace("fr/memberForm.jsp");
+	}
+</script>
+
+</body>
+</html>
