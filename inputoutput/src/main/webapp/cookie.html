@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js
+"></script>
+<style>
+	* {
+		margin:0;
+		padding:0;
+	}
+	body {
+		font-size:12px;
+	}
+	input{
+		vertical-align:middle;
+	}
+	#notice_wrap {
+		width:300px;
+		position:absolute;
+		left:30px;
+		top:30px;
+		box-shadow:0 0 8px #000;
+	}
+	.closeWrap {
+		background-color:#000;
+		color:#fff;
+		text-align:right;
+		padding:5px 10px;
+		
+	}
+	
+	.closeWrap button {
+		margin-left:20px;
+		cursor:pointer;
+	}
+</style>
+<script>
+	$(function(){
+		if($.cookie("popup")=="none"){
+			$("#notice_wrap").hide();
+		}
+		var $expChk = $("#expiresChk");
+		 $(".closeBtn").on("click", closePop);
+		 function closePop() {
+		 if($expChk.is(":checked")) {
+		 }
+		 $.cookie("popup","none",{expires:3, path:"/"});
+		 $("#notice_wrap").fadeOut("fast");
+		 } 
+ });
+
+
+</script>
+</head>
+<body>
+	<div id="notice_wrap">
+		<img src="img/1.jpg">
+		<p class="closeWrap">
+			<input type="checkbox" name="expiresChk" id="expiresChk">
+			<label for="expiresChk">3일동안 열지않기</label>
+			<button class="closeBtn">닫기</button>
+		</p>
+	</div>
+</body>
+</html>
